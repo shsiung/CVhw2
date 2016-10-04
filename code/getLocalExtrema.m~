@@ -7,7 +7,7 @@ function locs = getLocalExtrema(DoGPyramid, DoGLevels, PrincipalCurvature,th_con
 % th_contrast - remove any point that is a local extremum but does not have a DoG response magnitude above this threshold
 % th_r - remove any edge-like points that have too large a principal curvature ratio
 % output
-% locs - N x 3 matrix where the DoG pyramid achieves a local extrema in both scale and space, and also satisfies the two thresholds.
+% A matrix of grayscale images of size (size(im),numel(levels))
 
 % Find local extremums
 maximums = imregionalmax(DoGPyramid,6);
@@ -22,7 +22,7 @@ temp = zeros(length(imax)+length(imin),3);
 for i = 1: length(imax)
    if (DoGPyramid(imax(i),jmax(i),kmax(i))>th_contrast && ...
        PrincipalCurvature(imax(i),jmax(i),kmax(i)) < th_r)
-       temp(i,:) = [jmax(i) imax(i) DoGLevels(kmax(i))];
+       temp(i,:) = [imax(i) jmax(i) DoGLevels(kmax(i))];
    else
        temp(i,:) = [nan nan nan];
    end
@@ -31,7 +31,7 @@ end
 for i = 1: length(imin)
    if (DoGPyramid(imin(i),jmin(i),kmin(i))>th_contrast && ...
        PrincipalCurvature(imin(i),jmin(i),kmin(i)) < th_r)
-       temp(i+length(imax),:) = [jmin(i) imin(i) DoGLevels(kmin(i))];
+       temp(i+length(imax),:) = [imin(i) jmin(i) DoGLevels(kmin(i))];
    else
        temp(i+length(imax),:) = [nan nan nan];
    end

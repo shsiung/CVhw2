@@ -9,3 +9,6 @@ function [compareA, compareB] = makeTestPattern(patchWidth, nbits)
 
 compareA = randi(patchWidth^2,nbits,1);
 compareB = randi(patchWidth^2,nbits,1);
+
+%% Only ran once to save the pattern file
+%save('testPattern.mat','compareA', 'compareB');

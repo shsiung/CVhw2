@@ -10,3 +10,35 @@ function [locs,desc] = computeBrief(im, GaussianPyramid, locsDoG, k, levels, com
 % locs - an m x 3 vector, where the first two columns are the image coordinates of keypoints and the third column is 
 %		 the pyramid level of the keypoints
 % desc - an m x n bits matrix of stacked BRIEF descriptors. m is the number of valid descriptors in the image and will vary
+
+
+% PatchWidth
+pw = 9;
+nbits = 256;
+offset = floor(pw/2);
+[iX,jX]=ind2sub([pw pw],compareA);
+[iY,jY]=ind2sub([pw pw],compareB);
+
+% Keypoint locations with valid descriptors (valid patch)
+locs = locsDoG;
+locs = locs(locs(:,1)>offset,:);
+locs = locs(locs(:,1)<size(im,2)-offset,:);
+locs = locs(locs(:,2)>offset,:);
+locs = locs(locs(:,2)<size(im,1)-offset,:);
+desc = zeros(size(locs,1),nbits);
+
+% Make the keypoints center
+iX = iX - offset - 1;
+jX = jX - offset - 1;
+iY= iY - offset - 1;
+jY = jY - offset - 1;
+
+% Loop through m (valid descriptors)
+for i = 1 : size(locs,1)
+    % Loop through n (BRIEF tests)
+    curr_level = find(levels == locs(i,3));
+    for j = 1 : nbits
+        desc(i,j) = GaussianPyramid(locs(i,2)+iX(j),locs(i,1)+jX(j),curr_level) < ...
+                    GaussianPyramid(locs(i,2)+iY(j),locs(i,1)+jY(j),curr_level);
+    end
+end

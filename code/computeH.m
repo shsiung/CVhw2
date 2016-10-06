@@ -15,6 +15,5 @@ for i = 1 : N
                      -p1(1,i) -p1(2,i) -1 ...
                      p1(1,i)*p2(2,i) p1(2,i)*p2(2,i) p2(2,i)];
 end
-[~, ~, V] = svd(A)
-H = V(:,end);
-H2to1 = reshape(H,[3,3]);
+[~, ~, V] = svd(A,'econ');
+H2to1 = reshape(V(:,end),3,3)';

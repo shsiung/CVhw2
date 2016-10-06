@@ -18,8 +18,8 @@ for i = 1:length(matches)
     p1(i,:) = locs1(matches(i,1),:);
     p2(i,:) = locs2(matches(i,2),:); 
 end
-H2to1 = computeH(p1',p2');
-img2_warp = warpH(img2, H2to1, [size(img1,1) size(img1,2)]);
+H2to1 = computeH(p1(:,1:2)',p2(:,1:2)');
+img2_warp = warpH(img2, H2to1, [size(img2,1) size(img2,2)]);
 
 imshow(img2_warp)
 panoimg = 1;

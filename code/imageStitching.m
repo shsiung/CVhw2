@@ -6,20 +6,26 @@ function [panoImg] = imageStitching(img1, img2, H2to1)
 %
 % output
 % Blends img1 and warped img2 and outputs the panorama image
-ratio = 0.5;
-[locs1, desc1] = briefLite(img1);
-[locs2, desc2] = briefLite(img2);
-[matches] = briefMatch(desc1, desc2, ratio);
 
-p1 = zeros(length(matches),3);
-p2 = zeros(length(matches),3);
+img2_warp = warpH(img2, H2to1, [size(img1,1)*2, size(img1,2)*2]);
 
-for i = 1:length(matches)
-    p1(i,:) = locs1(matches(i,1),:);
-    p2(i,:) = locs2(matches(i,2),:); 
-end
-H2to1 = computeH(p1',p2');
-img2_warp = warpH(img2, H2to1, [size(img1,1) size(img1,2)]);
+% Find the last row  (y-pixels) that is nonzero (for resizing the final image)
+idx = cumsum(ones(size(img2_warp)),1);
+idx(~img2_warp) = 0;
+im_ylim = max(max(idx));
+% Find the last column (x-pixels) that is nonzero (for resizing the final image)
+idy = cumsum(ones(size(img2_warp)),2);
+idy(~img2_warp) = 0;
+im_xlim = max(max(idy));
 
-imshow(img2_warp)
-panoimg = 1;
+% Resize the final image to eliminate as much black region as possible
+img2_warp = img2_warp(1:im_ylim(:,:,1),1:im_xlim(:,:,1),:);
+
+% Overlay img1 to the final image
+panoImg = img2_warp;
+panoImg(1:size(img1,1),1:size(img1,2),:)= img1;
+%% For plotting purposes
+% figure(1)
+% imshow(img2_warp)
+% figure(2)
+% imshow(panoImg)

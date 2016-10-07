@@ -30,7 +30,7 @@ desc = zeros(size(locs,1),nbits);
 % Make the keypoints center
 iX = iX - offset - 1;
 jX = jX - offset - 1;
-iY= iY - offset - 1;
+iY = iY - offset - 1;
 jY = jY - offset - 1;
 
 % Loop through m (valid descriptors)

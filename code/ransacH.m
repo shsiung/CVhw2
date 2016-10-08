@@ -1,4 +1,3 @@
-
 function [bestH] = ransacH(matches, locs1, locs2, nIter, tol)
 % input
 % locs1 and locs2 - matrices specifying point locations in each of the images
@@ -10,36 +9,37 @@ function [bestH] = ransacH(matches, locs1, locs2, nIter, tol)
 
 numMatches = size(matches,1);
 %minError =  4.2950e+09;
-bestH = eye(3);
-p1_all = locs1(matches(:,1),1:2)';
-p2_all = locs2(matches(:,2),1:2)';
-pp_all = [p2_all; ones(1,size(p2_all,2))];
-    
+p1Match = locs1(matches(:,1),1:2)';
+p2Match = locs2(matches(:,2),1:2)';
+pp_all = [p2Match; ones(1,size(p2Match,2))];
+bestH = zeros(3,3);
+
 for i = 1:nIter
-    sample = int32(random('Uniform',1,numMatches,4,1));
-    p1 = locs1(matches(sample,1),1:2);
-    p2 = locs2(matches(sample,2),1:2);
+    % Randomly find 4 samples to compute H
+    rand_sample = int32(random('Uniform',1,numMatches,4,1));
+    p1_samp = locs1(matches(rand_sample,1),1:2);
+    p2_samp = locs2(matches(rand_sample,2),1:2);
 
-    p1 = p1';
-    p2 = p2';
-
-    H = computeH(p1,p2);
+    H_samp = computeH(p1_samp',p2_samp');
     
-    p2_allH = H*pp_all;
+    %Convert all matched points in P2 and compare them to P1 using H_sample calculated.
+    p2_allH = H_samp*pp_all;
     p2_allH(1,:) = p2_allH(1,:)./p2_allH(3,:);
     p2_allH(2,:) = p2_allH(2,:)./p2_allH(3,:);
     
-    error = (p1_all-p2_allH(1:2,:)).^2;
+    error = (p1Match-p2_allH(1:2,:)).^2;
     errorSum = sum(error,1);
     
     errorNum = numel(find(errorSum>tol==1));
 
     if i == 1
         minError = errorNum;
-        bestH = H;
+        bestH = H_samp;
     elseif(errorNum < minError)
-        bestH = H;
+        bestH = H_samp;
         minError = errorNum;
     end
 
+
 end
+    minError

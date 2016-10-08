@@ -7,6 +7,14 @@ function [bestH] = ransacH(matches, locs1, locs2, nIter, tol)
 % output
 % bestH - homography model with the most inliers found during RANSAC
 
+if ~exist('nIter', 'var') || isempty(nIter)
+    nIter = 5000;
+end
+
+if ~exist('tol', 'var') || isempty(tol)
+    tol = 300;
+end
+
 numMatches = size(matches,1);
 %minError =  4.2950e+09;
 p1Match = locs1(matches(:,1),1:2)';
@@ -29,7 +37,6 @@ for i = 1:nIter
     
     error = (p1Match-p2_allH(1:2,:)).^2;
     errorSum = sum(error,1);
-    
     errorNum = numel(find(errorSum>tol==1));
 
     if i == 1

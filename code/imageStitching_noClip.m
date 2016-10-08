@@ -17,9 +17,8 @@ img2_corners_warp(1,:) = img2_corners_warp(1,:)./img2_corners_warp(3,:);
 img2_corners_warp(2,:) = img2_corners_warp(2,:)./img2_corners_warp(3,:);
 
 % Set up translation matrix
-padding = 10;
 H = eye(3);
-H(2,3) = -floor(min(img2_corners_warp(2,:))) + padding;
+H(2,3) = -floor(min(img2_corners_warp(2,:)));
 
 % Warping both img1 and img2 to eliminate image clipping
 img1_warp = warpH(img1, H, [size(img1,1)*2, size(img1,2)*2]);

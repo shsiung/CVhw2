@@ -25,7 +25,8 @@ img2_warp = img2_warp(1:im_ylim(:,:,1),1:im_xlim(:,:,1),:);
 panoImg = img2_warp;
 panoImg(1:size(img1,1),1:size(img1,2),:)= img1;
 %% For plotting purposes
-figure(1)
-imshow(img2_warp)
-figure(2)
-imshow(panoImg)
+% figure(1)
+% imshow(img2_warp)
+% imwrite(img2_warp,'5_1.jpg');
+% figure(2)
+% imshow(panoImg)

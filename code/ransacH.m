@@ -12,7 +12,7 @@ if ~exist('nIter', 'var') || isempty(nIter)
 end
 
 if ~exist('tol', 'var') || isempty(tol)
-    tol = 300;
+    tol = 5;
 end
 
 numMatches = size(matches,1);
@@ -49,4 +49,3 @@ for i = 1:nIter
 
 
 end
-    minError

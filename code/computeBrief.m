@@ -38,7 +38,7 @@ for i = 1 : size(locs,1)
     % Loop through n (BRIEF tests)
     curr_level = find(levels == locs(i,3));
     for j = 1 : nbits
-        desc(i,j) = GaussianPyramid(locs(i,2)+iX(j),locs(i,1)+jX(j),curr_level) < ...
-                    GaussianPyramid(locs(i,2)+iY(j),locs(i,1)+jY(j),curr_level);
+        desc(i,j) = im(locs(i,2)+iX(j),locs(i,1)+jX(j)) < ...
+                    im(locs(i,2)+iY(j),locs(i,1)+jY(j));
     end
 end

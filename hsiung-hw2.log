@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 OCT 2016 09:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  9 OCT 2016 14:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -902,78 +902,112 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.29405pt on input line 60.
 \c__siunitx_mathtt_int=\count183
 LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 67.
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 69.
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+<1_1.png, id=1, 1140.26pt x 352.31625pt>
+File: 1_1.png Graphic file (type png)
+ <use 1_1.png>
+Package pdftex.def Info: 1_1.png used on input line 74.
+(pdftex.def)             Requested size: 469.75502pt x 145.14409pt.
 
+<1_2.png, id=2, 1140.26pt x 352.31625pt>
+File: 1_2.png Graphic file (type png)
+ <use 1_2.png>
+Package pdftex.def Info: 1_2.png used on input line 83.
+(pdftex.def)             Requested size: 469.75502pt x 145.14409pt.
+ [1
+
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./1_1.p
+ng (PNG copy)> <./1_2.png (PNG copy)>] <1_5.png, id=13, 265.99374pt x 377.41pt>
+File: 1_5.png Graphic file (type png)
+ <use 1_5.png>
+Package pdftex.def Info: 1_5.png used on input line 92.
+(pdftex.def)             Requested size: 234.8775pt x 333.26782pt.
+
+[2 <./1_5.png>] <2_4_chicken.png, id=19, 579.16376pt x 310.15875pt>
+File: 2_4_chicken.png Graphic file (type png)
+
+<use 2_4_chicken.png>
+Package pdftex.def Info: 2_4_chicken.png used on input line 101.
+(pdftex.def)             Requested size: 469.75502pt x 251.56796pt.
+ <2_4_incline.png, id=20, 1011.78pt x 291.0875pt>
+File: 2_4_incline.png Graphic file (type png)
+
+<use 2_4_incline.png>
+Package pdftex.def Info: 2_4_incline.png used on input line 102.
+(pdftex.def)             Requested size: 469.75502pt x 135.14996pt.
+ <2_4_book.png, id=21, 1096.095pt x 681.54625pt>
+File: 2_4_book.png Graphic file (type png)
+
+<use 2_4_book.png>
+Package pdftex.def Info: 2_4_book.png used on input line 103.
+(pdftex.def)             Requested size: 469.75502pt x 292.09201pt.
+ <2_4_book_rot.jpg, id=22, 957.5775pt x 665.48625pt>
+File: 2_4_book_rot.jpg Graphic file (type jpg)
+
+<use 2_4_book_rot.jpg>
+Package pdftex.def Info: 2_4_book_rot.jpg used on input line 104.
+(pdftex.def)             Requested size: 469.75502pt x 326.46683pt.
+ [3 <./2_4_chicken.png> <./2_4_incline.png>] [4 <./2_4_book.png (PNG copy)> <./
+2_4_book_rot.jpg>]
+Underfull \hbox (badness 1365) in paragraph at lines 111--113
+[][][]\OT1/ppl/b/n/12 2.5  \OT1/ppl/m/n/12 Show the his-togram of per-for-mance
+ of match-ing with dif-fer-ent ro-ta-tion of
  []
 
+<2_5.png, id=31, 749.80125pt x 543.02875pt>
+File: 2_5.png Graphic file (type png)
+ <use 2_5.png>
+Package pdftex.def Info: 2_5.png used on input line 116.
+(pdftex.def)             Requested size: 469.75502pt x 340.21243pt.
+ [5 <./2_5.png (PNG copy)>] [6] <q5_1.jpg, id=41, 1683.28876pt x 644.4075pt>
+File: q5_1.jpg Graphic file (type jpg)
+ <use q5_1.jpg>
+Package pdftex.def Info: q5_1.jpg used on input line 227.
+(pdftex.def)             Requested size: 469.75502pt x 179.83307pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
+<q5_1_2.jpg, id=42, 1252.68pt x 492.84125pt>
+File: q5_1_2.jpg Graphic file (type jpg)
+ <use q5_1_2.jpg>
+Package pdftex.def Info: q5_1_2.jpg used on input line 229.
+(pdftex.def)             Requested size: 469.75502pt x 184.815pt.
+ [7]
+<q5_2_pan.jpg, id=49, 1255.69125pt x 595.22375pt>
+File: q5_2_pan.jpg Graphic file (type jpg)
+ <use q5_2_pan.jpg>
+Package pdftex.def Info: q5_2_pan.jpg used on input line 237.
+(pdftex.def)             Requested size: 469.75502pt x 222.6725pt.
+ [8 <./q5_1.jpg> <./q5_1_2.jpg>] <q6_2.jpg, id=53, 1255.69125pt x 589.20125pt>
+File: q6_2.jpg Graphic file (type jpg)
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 79--80
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 88--89
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 94--95
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 97--98
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 100--101
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 103--104
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--111
-
- []
-
-[1
-
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./hsiung-hw2.aux) ) 
+<use q6_2.jpg>
+Package pdftex.def Info: q6_2.jpg used on input line 246.
+(pdftex.def)             Requested size: 469.75502pt x 220.41948pt.
+ [9 <./q5_2_pan.jpg> <./q6_2.jpg>] (./hsiung-hw2.aux) ) 
 Here is how much of TeX's memory you used:
- 15571 strings out of 493089
- 311871 string characters out of 6134842
- 359740 words of memory out of 5000000
- 18879 multiletter control sequences out of 15000+600000
- 14647 words of font info for 47 fonts, out of 8000000 for 9000
+ 15668 strings out of 493089
+ 313056 string characters out of 6134842
+ 368740 words of memory out of 5000000
+ 18942 multiletter control sequences out of 15000+600000
+ 25357 words of font info for 79 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,15n,42p,10395b,231s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r
-.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.
-pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msa
-m10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplb8a.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on hsiung-hw2.pdf (1 page, 42832 bytes).
+ 44i,25n,42p,10395b,429s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015
+/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2015/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/ty
+pe1/public/mathpazo/fplmr.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/mathpazo/fplmri.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publi
+c/amsfonts/symbols/msam10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/u
+rw/palatino/uplb8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/pala
+tino/uplr8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/up
+lri8a.pfb>
+Output written on hsiung-hw2.pdf (9 pages, 2518029 bytes).
 PDF statistics:
- 25 PDF objects out of 1000 (max. 8388607)
- 17 compressed objects within 1 object stream
+ 91 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 
